@@ -1,0 +1,75 @@
+body {
+  background: linear-gradient(135deg, #0f2027, #2c5364, #1a2980, #26d0ce);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', Arial, sans-serif;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  transition: background 0.5s;
+}
+h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  letter-spacing: 2px;
+  color: #00ffe7;
+  text-shadow: 0 0 20px #00ffe7, 0 0 40px #00ffe7;
+}
+.subtitle {
+  font-size:1.2rem;
+  color:#fff;
+  text-shadow:none;
+  font-weight:400;
+}
+.btn-group {
+  display: flex;
+  gap: 40px;
+  margin: 30px 0;
+}
+button {
+  background: linear-gradient(90deg, #00ffe7 0%, #5e60ce 100%);
+  border: none;
+  border-radius: 16px;
+  color: #181818;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  padding: 22px 48px;
+  cursor: pointer;
+  box-shadow: 0 0 14px #00ffe7, 0 0 40px #5e60ce80;
+  transition: transform 0.1s, box-shadow 0.3s;
+  outline: none;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+button:hover {
+  transform: scale(1.1) rotate(-2deg);
+  box-shadow: 0 0 24px #00ffe7, 0 0 80px #00ffe7a0;
+}
+.output {
+  min-height: 110px;
+  background: rgba(0,0,0,0.5);
+  border-radius: 18px;
+  margin-top: 28px;
+  padding: 32px 26px;
+  max-width: 90vw;
+  font-size: 1.35rem;
+  text-align: center;
+  box-shadow: 0 0 30px #00ffe720;
+  font-family: 'Montserrat', Arial, sans-serif;
+  opacity: 0;
+  animation: fadeIn 0.7s forwards;
+  word-break: break-word;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+@media (max-width: 600px) {
+  h1 { font-size: 1.5rem; }
+  .btn-group { gap: 16px; }
+  button { font-size: 1rem; padding: 14px 20px; }
+  .output { padding: 16px 8px; font-size: 1rem; }
+}
